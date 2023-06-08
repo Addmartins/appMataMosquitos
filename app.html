@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Mata Mosquitos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="jogo.js"></script>
+</head>
+<body onresize="ajustaPalcoJogo()">
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="imagens/imagens/coracao_cheio.png" alt="">
+            <img id="v2" src="imagens/imagens/coracao_cheio.png" alt="">
+            <img id="v3" src="imagens/imagens/coracao_cheio.png" alt="">
+        </div>
+        <div class="cronometro">
+            Tempo Restante: <span id="cronometro"></span>
+        </div>
+    </div>
+<script>
+
+    document.getElementById('cronometro').innerHTML = tempo;
+
+    if(nivel === 'normal' || nivel === 'dificil'){
+        var criaMosquito = setInterval(function() {
+            geradorDeMosquitos();
+        }, criaMosquitoTempo);
+
+    } else { 
+        function gerarERemoverMosquitos() {
+        criaMosquitoTempo = Math.floor(Math.random() * 4)
+    
+        switch(criaMosquitoTempo) {
+            case 0:
+                setInterval(function(){
+                    geradorDeMosquitos();
+               }, 750);
+            case 1:
+                setInterval(function(){
+                    geradorDeMosquitos();
+               }, 800);
+            case 2:
+                setInterval(function(){
+                    geradorDeMosquitos();
+               }, 1000);
+            case 3:
+                setInterval(function(){
+                    geradorDeMosquitos();
+               }, 1100);
+            
+            break
+        }
+
+        console.log(criaMosquitoTempo);
+    }
+
+    gerarERemoverMosquitos();
+    }
+
+    console.log(nivel)
+   
+</script>
+</body>
+</html>
