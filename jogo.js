@@ -2,7 +2,7 @@
 var altura = 0;
 var largura = 0;
 var vida = 1;
-var tempo = 25;
+var tempo = 60;
 
 var criaMosquitoTempo = 1500;
 
