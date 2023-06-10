@@ -46,9 +46,9 @@ body {
     float: left;
 }
 
-.cronometro {
+.time {
     float: left;
-    font-size: 20px;
+    font-size: 2.25px;
     font-weight: bold;
 }
 
